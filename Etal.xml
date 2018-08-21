@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ETAL>
+	<FILE>CheckErrorCorrect.moc</FILE>
+	<OUTPUTFILE>output.txt</OUTPUTFILE>
+	<NAME>Check Error Correct</NAME>
+	
+	<CREATED>25/07/2018</CREATED>
+	<LASTMODIFIED>25/07/2018</LASTMODIFIED>
+	<MINVERID>5540</MINVERID>
+	<AUTHOR>Michael.Radleys</AUTHOR>
+</ETAL>

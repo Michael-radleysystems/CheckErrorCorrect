@@ -1,0 +1,27 @@
+// Etal to set a globel setting to say if error correct was used this sale
+
+dofile("etal\\lib\\keys.moc");
+local bDebug = false;
+
+function OnInit()
+{
+	ICR_SetGlobalUserData("ECFLAG",false,false);
+}
+
+function AfterKeyPress(nFile, nRecord, nKeyType)
+{
+	if(nKeyType == 37)
+	{
+		if(bDebug)print("Error Correct was pressed ");
+		ICR_SetGlobalUserData("ECFLAG",true ,false);
+	}
+	
+	local nErrorCorrect = ICR_GetGlobalUserData("ECFLAG");
+	if(bDebug)print("Error Correct pressed "+nErrorCorrect);
+}
+
+function AfterFinalise()
+{	
+	if(bDebug)print("Finalize key was pressed ");
+	ICR_SetGlobalUserData("ECFLAG",false,false);	
+} 
